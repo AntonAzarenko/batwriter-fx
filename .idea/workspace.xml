@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="33f9b304-e960-49ce-8994-00b8e964f265" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/BatWriterApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/CommonWindowsWidget.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/Main$StageEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/SceneChanger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/StageInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/WindowLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/api/DialogsChooser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/controllers/DialogsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/controllers/GreetingController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/controllers/InstallerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/controllers/MainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/controllers/SettingsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/domain/CommandToAppend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/domain/Document.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/domain/PropertiesApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/domain/TypeCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/domain/TypeDocument.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/domain/TypeFileCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/domain/asd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/services/BuilderStrings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/services/HelpBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/services/Helper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/services/IWriter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/services/Reader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/services/Runner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/services/Writer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/services/doc/Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/services/doc/ComplexCommandBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/services/doc/SingleCommandBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/services/env/ESetterI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/services/env/IEnvironmentSetter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/util/CommandBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/util/FilesSearcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/util/PropertiesLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/windows/GreetingWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/windows/InstallerWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/windows/MainWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/azarenka/batwriter/windows/SettingsWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/.batwriter-greeting.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/.batwriter-installer.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/.batwriter-setting.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/.batwriter_v2.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/properties.ini" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1czFSbVwcmkdqCn8wZGbGy8U0BU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PROJECTS/JavaRush/JavaRushTasks" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.4229885" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.azarenka.batwriter.controllers" />
+      <recent name="com.azarenka.batwriter.windows" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\java\batwriter-fx\src\main\resources" />
+      <recent name="F:\java\batwriter-fx\src\main\java\com\azarenka\batwriter\services" />
+      <recent name="F:\java\batwriter-fx\src\main\resources\fxml" />
+      <recent name="F:\java\batwriter-fx\src\main\java\com\azarenka\batwriter" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BatWriterApplication">
+    <configuration name="FilesSearcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.azarenka.batwriter.util.FilesSearcher" />
+      <module name="batwriter-fx" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.azarenka.batwriter.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.azarenka.batwriter.util.Main" />
+      <module name="batwriter-fx" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.azarenka.batwriter.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.azarenka.batwriter.Main" />
+      <module name="batwriter-fx" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.azarenka.batwriter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.azarenka.batwriter.util.Main" />
+      <module name="batwriter-fx" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.azarenka.batwriter.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BatWriterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="batwriter-fx" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.azarenka.batwriter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.azarenka.batwriter.BatWriterApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.BatWriterApplication" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.FilesSearcher" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="33f9b304-e960-49ce-8994-00b8e964f265" name="Default Changelist" comment="" />
+      <created>1591523515836</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591523515836</updated>
+      <workItem from="1591523518602" duration="19847000" />
+      <workItem from="1591591877264" duration="1918000" />
+      <workItem from="1591695391094" duration="118000" />
+      <workItem from="1591695551202" duration="2000" />
+      <workItem from="1591795693334" duration="62000" />
+      <workItem from="1591854078979" duration="4642000" />
+      <workItem from="1591945259452" duration="9998000" />
+      <workItem from="1592073115838" duration="11000" />
+      <workItem from="1594568704034" duration="6505000" />
+      <workItem from="1594781963897" duration="600000" />
+      <workItem from="1594820623062" duration="1251000" />
+      <workItem from="1595343212880" duration="1429000" />
+      <workItem from="1601112750947" duration="1299000" />
+      <workItem from="1601356989985" duration="30565000" />
+      <workItem from="1601442867286" duration="2286000" />
+      <workItem from="1601446546524" duration="1852000" />
+      <workItem from="1601455601611" duration="1028000" />
+      <workItem from="1601457833721" duration="390000" />
+      <workItem from="1601459996280" duration="2910000" />
+      <workItem from="1601463200575" duration="601000" />
+      <workItem from="1601467426370" duration="2315000" />
+      <workItem from="1601528208843" duration="2508000" />
+      <workItem from="1601714021175" duration="2955000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="183" width="816" height="730" key="#Intentions" timestamp="1601377547081">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="183" width="816" height="730" key="#Intentions/0.0.1920.1050@0.0.1920.1050" timestamp="1601377547081" />
+    <state x="552" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594568754961">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1594568754961" />
+    <state x="765" y="208" key="#com.intellij.ide.util.MemberChooser" timestamp="1601375993558">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="765" y="208" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1601375993558" />
+    <state x="710" y="384" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1601469052996">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="710" y="384" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1601469052996" />
+    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1601716189318">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1601716189318" />
+    <state x="835" y="422" key="Github.ShareDialog" timestamp="1601716240641">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="835" y="422" key="Github.ShareDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1601716240641" />
+    <state width="1877" height="277" key="GridCell.Tab.0.bottom" timestamp="1601716103720">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1601716103720" />
+    <state width="1877" height="277" key="GridCell.Tab.0.center" timestamp="1601716103720">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="277" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1601716103720" />
+    <state width="1877" height="277" key="GridCell.Tab.0.left" timestamp="1601716103720">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="277" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1601716103720" />
+    <state width="1877" height="277" key="GridCell.Tab.0.right" timestamp="1601716103720">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="277" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1601716103720" />
+    <state width="1877" height="277" key="GridCell.Tab.1.bottom" timestamp="1601716103720">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="277" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1601716103720" />
+    <state width="1877" height="277" key="GridCell.Tab.1.center" timestamp="1601716103720">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="277" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1601716103720" />
+    <state width="1877" height="277" key="GridCell.Tab.1.left" timestamp="1601716103720">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="277" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1601716103720" />
+    <state width="1877" height="277" key="GridCell.Tab.1.right" timestamp="1601716103720">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="277" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1601716103720" />
+    <state width="1877" height="342" key="GridCell.Tab.2.bottom" timestamp="1601442804887">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="342" key="GridCell.Tab.2.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1601442804887" />
+    <state width="1877" height="342" key="GridCell.Tab.2.center" timestamp="1601442804887">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="342" key="GridCell.Tab.2.center/0.0.1920.1050@0.0.1920.1050" timestamp="1601442804887" />
+    <state width="1877" height="342" key="GridCell.Tab.2.left" timestamp="1601442804887">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="342" key="GridCell.Tab.2.left/0.0.1920.1050@0.0.1920.1050" timestamp="1601442804887" />
+    <state width="1877" height="342" key="GridCell.Tab.2.right" timestamp="1601442804887">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="342" key="GridCell.Tab.2.right/0.0.1920.1050@0.0.1920.1050" timestamp="1601442804887" />
+    <state x="461" y="169" key="SettingsEditor" timestamp="1601469205584">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="169" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1601469205584" />
+    <state width="968" height="533" key="XDebugger.FullValuePopup" timestamp="1601410030404">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="968" height="533" key="XDebugger.FullValuePopup/0.0.1920.1050@0.0.1920.1050" timestamp="1601410030404" />
+    <state x="690" y="286" key="extract.method.dialog" timestamp="1595343389608">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="690" y="286" key="extract.method.dialog/0.0.1920.1050@0.0.1920.1050" timestamp="1595343389608" />
+    <state width="600" height="424" key="javadoc.popup" timestamp="1594568992251">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="600" height="424" key="javadoc.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1594568992251" />
+    <state x="666" y="272" key="refactoring.ChangeSignatureDialog" timestamp="1595343277198">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="666" y="272" key="refactoring.ChangeSignatureDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1595343277198" />
+    <state x="616" y="243" key="run.anything.popup" timestamp="1601376928756">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1601376928756" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/ClassLoader.java</url>
+          <line>1310</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/azarenka/batwriter/services/Reader.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/azarenka/batwriter/services/BuilderStrings.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/azarenka/batwriter/services/doc/ComplexCommandBuilder.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/azarenka/batwriter/services/doc/ComplexCommandBuilder.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/azarenka/batwriter/services/doc/ComplexCommandBuilder.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
