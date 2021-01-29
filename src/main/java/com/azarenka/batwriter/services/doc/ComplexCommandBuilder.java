@@ -1,5 +1,6 @@
 package com.azarenka.batwriter.services.doc;
 
+import com.azarenka.batwriter.api.Builder;
 import com.azarenka.batwriter.domain.CommandToAppend;
 import com.azarenka.batwriter.domain.Document;
 import com.azarenka.batwriter.domain.TypeCommand;
@@ -11,7 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ComplexCommandBuilder implements Builder{
+public class ComplexCommandBuilder implements Builder {
 
     private CommandToAppend command;
     private Reader reader;
@@ -58,7 +59,7 @@ public class ComplexCommandBuilder implements Builder{
         document.add(getCondition());
         document.add(getSeparator());
         document.add(getDescription(TypeCommand.valueOf(command.getType().name()) + " to " + command.getDescription()));
-        document.add("@" + getDiskLater()+ ":");
+        document.add("@" + getDiskLetter()+ ":");
         document.add(getCommand());
         document.add(getFinalString());
     }
@@ -99,7 +100,7 @@ public class ComplexCommandBuilder implements Builder{
         }
     }
 
-    private String getDiskLater() {
+    private String getDiskLetter() {
         return command.getPathToFileExecute().substring(0,1);
     }
 }

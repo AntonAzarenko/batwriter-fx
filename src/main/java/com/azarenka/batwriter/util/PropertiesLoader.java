@@ -35,7 +35,7 @@ public class PropertiesLoader {
     public String getProperties(String alias) {
         Properties properties = new Properties();
         try {
-            properties.load(new FileInputStream(Objects.requireNonNull(resource.getFilename())));
+            properties.load(new FileInputStream("C:\\commands\\properties.ini"));
         } catch (IOException e) {
             e.printStackTrace();
         }

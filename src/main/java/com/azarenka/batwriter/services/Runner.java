@@ -3,7 +3,7 @@ package com.azarenka.batwriter.services;
 import com.azarenka.batwriter.domain.CommandToAppend;
 import com.azarenka.batwriter.domain.Document;
 import com.azarenka.batwriter.domain.TypeFileCommand;
-import com.azarenka.batwriter.services.doc.Builder;
+import com.azarenka.batwriter.api.Builder;
 import com.azarenka.batwriter.services.doc.ComplexCommandBuilder;
 import com.azarenka.batwriter.services.doc.SingleCommandBuilder;
 
@@ -30,6 +30,16 @@ public class Runner {
             builder = new ComplexCommandBuilder();
             Document document = builder.buildDocument(commandToAppend);
             write(document.getLinesOfDoc());
+        }
+    }
+
+    public void execute(String command) {
+        Runtime rt = Runtime.getRuntime();
+        try {
+            rt.exec(command);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
     }
 

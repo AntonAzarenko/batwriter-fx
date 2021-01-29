@@ -8,51 +8,40 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.azarenka.batwriter.controllers.MainController">
-  <children>
+<VBox prefHeight="450.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.azarenka.batwriter.controllers.MainController">
     <MenuBar VBox.vgrow="NEVER">
-      <menus>
         <Menu mnemonicParsing="false" text="File">
-          <items>
             <MenuItem mnemonicParsing="false" text="Quit" />
-          </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Edit">
-          <items>
             <MenuItem mnemonicParsing="false" onAction="#setSettingScene" text="edit" />
-          </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Help">
-          <items>
             <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
-          </items>
         </Menu>
-      </menus>
     </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
-         <children>
-            <Label layoutX="28.0" layoutY="110.0" prefHeight="17.0" prefWidth="86.0" text="Команда:" />
-            <Button fx:id="buttonAdd" layoutX="28.0" layoutY="321.0" mnemonicParsing="false" onAction="#addCommand" prefHeight="25.0" prefWidth="63.0" text="Add" />
-            <Button layoutX="460.0" layoutY="333.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" text="Edit" />
-            <TextField fx:id="command" layoutX="28.0" layoutY="127.0" prefHeight="25.0" prefWidth="353.0" />
-            <CheckBox fx:id="var" layoutX="113.0" layoutY="325.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="225.0" text="Добавить системную переменную" />
-            <ListView layoutX="413.0" layoutY="26.0" prefHeight="288.0" prefWidth="200.0" />
-            <Separator layoutX="397.0" layoutY="14.0" orientation="VERTICAL" prefHeight="343.0" prefWidth="0.0" />
-            <Label fx:id="pathLabel" layoutX="28.0" layoutY="74.0" prefHeight="17.0" prefWidth="365.0" />
-            <ChoiceBox fx:id="commandChoiceBox" layoutX="28.0" layoutY="26.0" prefHeight="25.0" prefWidth="149.0" />
-            <CheckBox fx:id="newFile" layoutX="47.0" layoutY="225.0" mnemonicParsing="false" text="Создать новый файл" />
-            <TextField fx:id="description" layoutX="28.0" layoutY="186.0" prefHeight="25.0" prefWidth="353.0" />
-            <Label layoutX="27.0" layoutY="171.0" prefHeight="17.0" prefWidth="86.0" text="Описание:" />
-            <Button layoutX="283.0" layoutY="26.0" mnemonicParsing="false" onAction="#choiceFile" text="Выбрать" />
-            <RadioButton fx:id="single" layoutX="46.0" layoutY="257.0" mnemonicParsing="false" text="Одиночная команда" onAction="#setSingleRadioButton"/>
-            <RadioButton fx:id="multi" layoutX="46.0" layoutY="286.0" mnemonicParsing="false" text="Сборник команд" onAction="#setMultiRadioButton" />
-         </children>
+    <AnchorPane VBox.vgrow="ALWAYS">
+        <Label layoutX="15.0" layoutY="186.0" prefHeight="17.0" prefWidth="86.0" text="Команда:" />
+        <Button layoutX="172.0" layoutY="382.0" mnemonicParsing="false" onAction="#addCommand" prefHeight="25.0" prefWidth="86.0" text="Добавить" />
+        <Button layoutX="465.0" layoutY="382.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" text="Редактировать" />
+        <TextField fx:id="command" layoutX="15.0" layoutY="203.0" prefHeight="25.0" prefWidth="365.0" />
+        <ListView layoutX="413.0" layoutY="19.0" prefHeight="353.0" prefWidth="211.0" />
+        <Separator layoutX="396.0" layoutY="20.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="1.0" />
+        <ChoiceBox fx:id="commandChoiceBox" layoutX="17.0" layoutY="54.0" prefHeight="25.0" prefWidth="365.0" />
+        <CheckBox fx:id="newFile" layoutX="17.0" layoutY="107.0" mnemonicParsing="false" text="Записать в основной командный файл" />
+        <TextField fx:id="description" layoutX="17.0" layoutY="253.0" prefHeight="25.0" prefWidth="365.0" />
+        <Label layoutX="17.0" layoutY="236.0" prefHeight="17.0" prefWidth="86.0" text="Описание:" />
+        <Button layoutX="320.0" layoutY="333.0" mnemonicParsing="false" onAction="#choiceFile" text="Выбрать" />
+        <Label layoutX="20.0" layoutY="18.0" text="Шаг 1: Выберите тип команды" />
+        <Separator layoutY="140.0" prefHeight="3.0" prefWidth="394.0" />
+        <Label layoutX="17.0" layoutY="150.0" text="Шаг 2: Введите команду" />
+        <Separator layoutX="5.0" layoutY="298.0" prefHeight="3.0" prefWidth="394.0" />
+        <Label layoutX="12.0" layoutY="308.0" text="Шаг 3: Выберите путь" />
+        <TextField layoutX="17.0" layoutY="333.0" prefHeight="25.0" prefWidth="292.0" />
     </AnchorPane>
-  </children>
 </VBox>

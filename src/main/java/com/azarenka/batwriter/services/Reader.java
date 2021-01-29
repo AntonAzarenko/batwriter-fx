@@ -1,9 +1,13 @@
 package com.azarenka.batwriter.services;
 
-import java.io.*;
+import static java.util.Collections.EMPTY_LIST;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 public class Reader {
@@ -20,11 +24,11 @@ public class Reader {
             }
             reader.close();
         } catch (FileNotFoundException e) {
-            System.out.println("Файл "+ fileName +" не найден");
+            System.out.println("Файл " + fileName + " не найден");
             System.out.println("Попытка создать новый");
             try {
                 Writer writer = new Writer(file, fileName);
-                writer.writeDocument(Collections.EMPTY_LIST);
+                writer.writeDocument(EMPTY_LIST);
             } catch (IOException ioException) {
                 System.out.println("Файл не создан");
             }

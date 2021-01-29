@@ -24,25 +24,23 @@ import javafx.scene.Scene;
  * Date 29.09.2020
  */
 @Component
-public class InstallerWindow extends CommonWindowsWidget {
+public class ToolsInstallerWindow extends CommonWindowsWidget {
 
     @Value(value = "classpath:fxml/.batwriter-installer.fxml")
     private Resource resource;
-    private Scene main;
-    private FXMLLoader mainWidgetWindow;
-    private Parent mainWidgetParent;
+    private Scene installerScene;
     private WindowLoader windowLoader;
 
-    public InstallerWindow(ApplicationContext applicationContext) {
+    public ToolsInstallerWindow(ApplicationContext applicationContext) {
         super(applicationContext);
     }
 
     public Scene getScene() {
-        return main;
+        return installerScene;
     }
 
     public void setScene(Scene main) {
-        this.main = main;
+        this.installerScene = main;
     }
 
     @PostConstruct
@@ -52,13 +50,9 @@ public class InstallerWindow extends CommonWindowsWidget {
 
     @Override
     public void loadBean() {
-        mainWidgetWindow = getWindowLoader().loadFxmlFile();
+        FXMLLoader mainWidgetWindow = windowLoader.loadFxmlFile();
         mainWidgetWindow.setControllerFactory(aClass -> applicationContext.getBean(aClass));
-        mainWidgetParent = getParent(mainWidgetWindow);
-        main = new Scene(mainWidgetParent, 640, 400);
-    }
-
-    public WindowLoader getWindowLoader() {
-        return windowLoader;
+        Parent mainWidgetParent = getParent(mainWidgetWindow);
+        installerScene = new Scene(mainWidgetParent, 640, 400);
     }
 }

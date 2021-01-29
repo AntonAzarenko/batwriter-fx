@@ -2,7 +2,6 @@ package com.azarenka.batwriter;
 
 import com.azarenka.batwriter.Main.StageEvent;
 import com.azarenka.batwriter.windows.GreetingWindow;
-import com.azarenka.batwriter.windows.InstallerWindow;
 
 import javafx.scene.Scene;
 import javafx.stage.Stage;

@@ -1,11 +1,13 @@
 package com.azarenka.batwriter.services;
 
+import com.azarenka.batwriter.api.IWriter;
+
 import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
-public class Writer extends FileWriter{
+public class Writer extends FileWriter implements IWriter {
     private String fileName;
     private File file;
 

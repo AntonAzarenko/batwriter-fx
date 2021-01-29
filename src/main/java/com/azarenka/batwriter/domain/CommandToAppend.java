@@ -7,7 +7,10 @@ import java.util.Objects;
 public class CommandToAppend {
 
     private TypeCommand typeCommand;
+    private TypeDocument typeDocument;
+    private TypeFileCommand typeFileCommand;
     private String pathToFileExecute;
+    private String pathToDir;
     private String fileName;
     private String description;
     /**
@@ -17,10 +20,8 @@ public class CommandToAppend {
     private String application;
     private String textCommand;
     private Helper helper;
-    private TypeDocument typeDocument;
     private boolean sysEnv;
     private boolean newFile;
-    private TypeFileCommand typeFileCommand;
 
     public CommandToAppend(TypeCommand typeCommand, String fileName, String description, String path,
                            String application, String textCommand, Helper helper, TypeDocument typeDocument,

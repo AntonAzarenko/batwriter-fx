@@ -1,4 +1,4 @@
-package com.azarenka.batwriter.services.env;
+package com.azarenka.batwriter.api;
 
 import java.util.Map;
 

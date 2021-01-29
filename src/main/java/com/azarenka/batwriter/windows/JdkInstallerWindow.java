@@ -13,35 +13,31 @@ import javax.annotation.PostConstruct;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.util.Callback;
 
 /**
  * Description
  * <p>
- * (c) ant-azarenko@mail.ru 2020
+ * (c) ant-azarenko@mail.ru 2021
  * </p>
  *
+ * Date 29.01.2021
+ *
  * @author Anton Azarenka
- * Date 29.09.2020
  */
 @Component
-public class GreetingWindow extends CommonWindowsWidget {
+public class JdkInstallerWindow extends CommonWindowsWidget {
 
-    @Value(value = "classpath:fxml/.batwriter-greeting.fxml")
+    @Value(value = "classpath:fxml/.batwriter-jdk-installer.fxml")
     private Resource resource;
-    private Scene greetingScene;
+    private Scene jdkInstallerScene;
     private WindowLoader windowLoader;
 
-    public GreetingWindow(ApplicationContext applicationContext) {
+    public JdkInstallerWindow(ApplicationContext applicationContext) {
         super(applicationContext);
     }
 
     public Scene getScene() {
-        return greetingScene;
-    }
-
-    public void setScene(Scene main) {
-        this.greetingScene = main;
+        return jdkInstallerScene;
     }
 
     @PostConstruct
@@ -54,6 +50,6 @@ public class GreetingWindow extends CommonWindowsWidget {
         FXMLLoader mainWidgetWindow = windowLoader.loadFxmlFile();
         mainWidgetWindow.setControllerFactory(applicationContext::getBean);
         Parent mainWidgetParent = getParent(mainWidgetWindow);
-        greetingScene = new Scene(mainWidgetParent, super.getWidth(), super.getHeight());
+        jdkInstallerScene = new Scene(mainWidgetParent, super.getWidth(), super.getHeight());
     }
 }

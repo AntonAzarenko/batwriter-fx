@@ -38,7 +38,7 @@ public class HelpBuilder {
     }
 
     /**
-     * Method receive Collection with strings of document. It split his to 2 collections - part of Help
+     * Method receives Collection with strings of document. It split his to 2 collections - part of Help
      * and part of other commands. And return map with two collections
      *
      * @param document list string of document

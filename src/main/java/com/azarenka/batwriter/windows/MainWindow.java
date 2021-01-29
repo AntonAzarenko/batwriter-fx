@@ -18,8 +18,6 @@ public class MainWindow extends CommonWindowsWidget {
     @Value(value = "classpath:fxml/.batwriter_v2.fxml")
     private Resource resource;
     private Scene main;
-    private FXMLLoader mainWidgetWindow;
-    private Parent mainWidgetParent;
     private WindowLoader windowLoader;
 
     public MainWindow(ApplicationContext applicationContext) {
@@ -30,10 +28,6 @@ public class MainWindow extends CommonWindowsWidget {
         return main;
     }
 
-    public void setScene(Scene main) {
-        this.main = main;
-    }
-
     @PostConstruct
     public void init() {
         this.windowLoader = new WindowLoader(resource);
@@ -41,13 +35,9 @@ public class MainWindow extends CommonWindowsWidget {
 
     @Override
     public void loadBean() {
-        mainWidgetWindow = getWindowLoader().loadFxmlFile();
+        FXMLLoader mainWidgetWindow = windowLoader.loadFxmlFile();
         mainWidgetWindow.setControllerFactory(aClass -> applicationContext.getBean(aClass));
-        mainWidgetParent = getParent(mainWidgetWindow);
-        main = new Scene(mainWidgetParent, 640, 400);
-    }
-
-    public WindowLoader getWindowLoader() {
-        return windowLoader;
+        Parent mainWidgetParent = getParent(mainWidgetWindow);
+        main = new Scene(mainWidgetParent, 640, 450);
     }
 }

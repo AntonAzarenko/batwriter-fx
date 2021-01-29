@@ -1,5 +1,6 @@
-package com.azarenka.batwriter.services;
+package com.azarenka.batwriter.api;
 
+import java.io.IOException;
 import java.util.List;
 
 public interface IWriter {
@@ -9,5 +10,5 @@ public interface IWriter {
      *
      * @param strings strings
      */
-    void writeDocument(List<String> strings);
+    void writeDocument(List<String> strings) throws IOException;
 }

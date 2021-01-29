@@ -1,4 +1,4 @@
-package com.azarenka.batwriter.services.doc;
+package com.azarenka.batwriter.api;
 
 import com.azarenka.batwriter.domain.CommandToAppend;
 import com.azarenka.batwriter.domain.Document;

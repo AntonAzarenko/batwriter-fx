@@ -1,12 +1,19 @@
 package com.azarenka.batwriter;
 
+import com.azarenka.batwriter.util.PropertiesLoader;
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 
 import java.io.IOException;
 
 public abstract class CommonWindowsWidget {
+
+    @Autowired
+    private PropertiesLoader propertiesLoader;
 
     protected ApplicationContext applicationContext;
 
@@ -26,4 +33,11 @@ public abstract class CommonWindowsWidget {
         return parent;
     }
 
+    protected double getWidth() {
+        return Double.parseDouble(propertiesLoader.getProperties("application.setting.resolution.width"));
+    }
+
+    protected double getHeight() {
+        return Double.parseDouble(propertiesLoader.getProperties("application.setting.resolution.height"));
+    }
 }
