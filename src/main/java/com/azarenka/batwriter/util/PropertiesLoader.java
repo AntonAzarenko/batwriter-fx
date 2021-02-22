@@ -13,7 +13,7 @@ import java.util.Properties;
 @Component
 public class PropertiesLoader {
 
-    @Value(value = "${spring.application.properties}")
+    @Value(value = "${spring.application.properties.dev}")
     private String path;
 
     @Value(value = "classpath:properties.ini")
@@ -35,7 +35,7 @@ public class PropertiesLoader {
     public String getProperties(String alias) {
         Properties properties = new Properties();
         try {
-            properties.load(new FileInputStream("C:\\commands\\properties.ini"));
+            properties.load(new FileInputStream(path));
         } catch (IOException e) {
             e.printStackTrace();
         }

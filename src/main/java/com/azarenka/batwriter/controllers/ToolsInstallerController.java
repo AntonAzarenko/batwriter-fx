@@ -1,7 +1,7 @@
 package com.azarenka.batwriter.controllers;
 
 import com.azarenka.batwriter.SceneChanger;
-import com.azarenka.batwriter.services.command.infrastructure.CommandCreator;
+import com.azarenka.batwriter.services.command.infrastructure.ICommandCreator;
 import com.azarenka.batwriter.api.ICommand;
 import com.azarenka.batwriter.services.command.infrastructure.SystemVariableInitializer;
 import com.azarenka.batwriter.util.PropertiesLoader;
@@ -43,7 +43,7 @@ public class ToolsInstallerController {
     private Button next, close;
     private String mavenPath, gradlewPath;
 
-    private static CommandCreator commandCreator;
+    private static ICommandCreator ICommandCreator;
 
     public void initialize() {
         initPaths();
@@ -88,8 +88,8 @@ public class ToolsInstallerController {
     }
 
     private ICommand initCommandCreator() {
-        commandCreator = new SystemVariableInitializer(loader);
-        return commandCreator.initCreator();
+        ICommandCreator = new SystemVariableInitializer(loader);
+        return ICommandCreator.initCreator();
     }
 
     public void executeCommand(String command) throws IOException {

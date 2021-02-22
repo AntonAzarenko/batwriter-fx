@@ -2,12 +2,14 @@ package com.azarenka.batwriter.domain;
 
 public enum TypeCommand {
     START_APPLICATION {
-        public  String getType() {
+        @Override
+        public String getType() {
             return "Starting to";
         }
     },
-    CHANGE_DIR{
-        public String getType(){
+    CHANGE_DIR {
+        @Override
+        public String getType() {
             return "Relocating to ";
         }
     },

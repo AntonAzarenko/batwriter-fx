@@ -1,49 +1,38 @@
 package com.azarenka.batwriter.services;
 
+import com.azarenka.batwriter.api.Builder;
 import com.azarenka.batwriter.domain.CommandToAppend;
 import com.azarenka.batwriter.domain.Document;
 import com.azarenka.batwriter.domain.TypeFileCommand;
-import com.azarenka.batwriter.api.Builder;
 import com.azarenka.batwriter.services.doc.ComplexCommandBuilder;
 import com.azarenka.batwriter.services.doc.SingleCommandBuilder;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class Runner {
+public class Executor {
     private Writer writer;
     private CommandToAppend commandToAppend;
     private Builder builder;
 
-    public Runner(CommandToAppend command) {
+    private Map<TypeFileCommand, Builder> builderMap;
+
+    public Executor(CommandToAppend command) {
         this.commandToAppend = command;
+        initBuilderMap();
     }
 
-    public void start() throws IOException {
-        if(commandToAppend.getTypeFileCommand().equals(TypeFileCommand.SINGLE)) {
-            builder = new SingleCommandBuilder();
-            Document document = builder.buildDocument(commandToAppend);
-            write(document.getLinesOfDoc());
-        }else {
-            builder = new ComplexCommandBuilder();
-            Document document = builder.buildDocument(commandToAppend);
-            write(document.getLinesOfDoc());
-        }
+    public void execute() throws IOException {
+        Builder builder = builderMap.get(commandToAppend.getTypeFileCommand());
+        Document document = builder.buildDocument(commandToAppend);
+        write(document.getLinesOfDoc());
     }
 
-    public void execute(String command) {
-        Runtime rt = Runtime.getRuntime();
-        try {
-            rt.exec(command);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
-
-    private void write(List<String> doc)  {
+    private void write(List<String> doc) {
         File file = new File(commandToAppend.getPath() + File.separator + commandToAppend.getFileName());
         try {
             File temp = new File(commandToAppend.getPath());
@@ -56,5 +45,11 @@ public class Runner {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void initBuilderMap() {
+        builderMap = new HashMap<>();
+        builderMap.put(TypeFileCommand.SINGLE, new SingleCommandBuilder());
+        builderMap.put(TypeFileCommand.MULTIPLE, new ComplexCommandBuilder());
     }
 }
