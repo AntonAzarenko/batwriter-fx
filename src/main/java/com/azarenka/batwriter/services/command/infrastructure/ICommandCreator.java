@@ -1,7 +1,6 @@
 package com.azarenka.batwriter.services.command.infrastructure;
 
 import com.azarenka.batwriter.api.ICommand;
-import com.azarenka.batwriter.services.command.ChangeDirCommand;
 
 /**
  * Description
@@ -12,10 +11,7 @@ import com.azarenka.batwriter.services.command.ChangeDirCommand;
  * @author Anton Azarenka
  * Date 03.10.2020
  */
-public class ChangeDirCreator extends  CommandCreator{
+public interface ICommandCreator {
 
-    @Override
-    public ICommand initCreator() {
-        return new ChangeDirCommand();
-    }
+    ICommand initCreator();
 }

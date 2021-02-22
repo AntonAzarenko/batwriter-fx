@@ -12,7 +12,7 @@ import com.azarenka.batwriter.services.command.ApplicationStarterCommand;
  * @author Anton Azarenka
  * Date 03.10.2020
  */
-public class StarterInitializer extends CommandCreator {
+public class StarterInitializer implements ICommandCreator {
 
     @Override
     public ICommand initCreator() {

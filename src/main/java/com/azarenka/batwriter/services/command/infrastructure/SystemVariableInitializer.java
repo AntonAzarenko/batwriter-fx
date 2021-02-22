@@ -13,7 +13,7 @@ import com.azarenka.batwriter.util.PropertiesLoader;
  * @author Anton Azarenka
  * Date 03.10.2020
  */
-public class SystemVariableInitializer extends CommandCreator {
+public class SystemVariableInitializer implements ICommandCreator {
 
     PropertiesLoader propertiesLoader;
 
