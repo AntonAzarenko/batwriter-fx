@@ -18,19 +18,11 @@ public class ApplicationStarterCommand implements ICommand {
     private static final String DEFAULT_DESCRIPTION = "Running...";
 
     @Override
-    public String getCommand(String path, String... vars) {
+    public String getCommand(String alias, String command, String path, String... vars) {
         return buildCommand(path, vars);
     }
 
     private String buildCommand(String path, String... var) {
-        StringBuilder builder = new StringBuilder();
-        builder.append(getDescription(var)).append("\n");
-        return builder.append("@ start ")
-            .append(path)
-            .toString();
-    }
-
-    private String getDescription(String... var) {
         StringBuilder builder = new StringBuilder();
         builder.append("@echo ");
         if (var.length > 0) {
@@ -40,6 +32,9 @@ public class ApplicationStarterCommand implements ICommand {
         } else {
             builder.append(DEFAULT_DESCRIPTION);
         }
+        builder.append("\n")
+            .append("@ start ")
+            .append(path);
         return builder.toString();
     }
 }

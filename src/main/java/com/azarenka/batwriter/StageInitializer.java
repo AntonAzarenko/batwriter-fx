@@ -29,8 +29,9 @@ public abstract class StageInitializer implements ApplicationListener<StageEvent
     public void onApplicationEvent(StageEvent stageEvent) {
         stage = stageEvent.getStage();
         greetingWindow.loadBean();
-        stage.setScene(greetingWindow.getScene());
+        setNewScene(greetingWindow.getScene());
         stage.setTitle("BatWriter");
+        stage.setIconified(true);
         stage.show();
     }
 

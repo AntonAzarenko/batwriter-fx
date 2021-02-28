@@ -1,8 +1,8 @@
 package com.azarenka.batwriter.controllers;
 
 import com.azarenka.batwriter.SceneChanger;
-import com.azarenka.batwriter.services.command.infrastructure.ICommandCreator;
 import com.azarenka.batwriter.api.ICommand;
+import com.azarenka.batwriter.services.command.infrastructure.ICommandCreator;
 import com.azarenka.batwriter.services.command.infrastructure.SystemVariableInitializer;
 import com.azarenka.batwriter.util.PropertiesLoader;
 import com.azarenka.batwriter.windows.MainWindow;
@@ -77,7 +77,7 @@ public class ToolsInstallerController {
 
     private boolean installSystemVariable(String path, String... var) {
         ICommand commandCreator = initCommandCreator();
-        String command = commandCreator.getCommand(path, var);
+        String command = commandCreator.getCommand(null, null, path, var);
         System.out.println(command);
         try {
             executeCommand(command);

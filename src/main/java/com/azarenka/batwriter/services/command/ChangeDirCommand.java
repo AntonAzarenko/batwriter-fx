@@ -14,7 +14,7 @@ import com.azarenka.batwriter.api.ICommand;
 public class ChangeDirCommand implements ICommand {
 
     @Override
-    public String getCommand(String path, String... var) {
+    public String getCommand(String alias, String command, String path, String... var) {
         return null;
     }
 }

@@ -18,6 +18,12 @@ public enum TypeCommand {
         public String getType() {
             return "System var";
         }
+    },
+    CMD {
+        @Override
+        public String getType() {
+            return "cmd var";
+        }
     };
 
     public abstract String getType();

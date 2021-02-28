@@ -38,6 +38,6 @@ public class MainWindow extends CommonWindowsWidget {
         FXMLLoader mainWidgetWindow = windowLoader.loadFxmlFile();
         mainWidgetWindow.setControllerFactory(aClass -> applicationContext.getBean(aClass));
         Parent mainWidgetParent = getParent(mainWidgetWindow);
-        main = new Scene(mainWidgetParent, 640, 450);
+        main = new Scene(mainWidgetParent, super.getWidth(), super.getHeight());
     }
 }

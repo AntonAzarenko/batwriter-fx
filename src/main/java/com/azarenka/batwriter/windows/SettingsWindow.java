@@ -45,7 +45,7 @@ public class SettingsWindow extends CommonWindowsWidget{
             mainWidgetWindow = getWindowLoader().loadFxmlFile();
             mainWidgetWindow.setControllerFactory(aClass -> applicationContext.getBean(aClass));
             mainWidgetParent = getParent(mainWidgetWindow);
-            main = new Scene(mainWidgetParent, 640, 400);
+            main = new Scene(mainWidgetParent, super.getWidth(), super.getHeight());
         }
 
         public WindowLoader getWindowLoader() {

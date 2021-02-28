@@ -30,7 +30,7 @@ public class SystemVariableCommand implements ICommand {
     }
 
     @Override
-    public String getCommand(String path, String... var) {
+    public String getCommand(String alias, String command, String path, String... var) {
         initFields();
         return buildCommand(path, var);
     }

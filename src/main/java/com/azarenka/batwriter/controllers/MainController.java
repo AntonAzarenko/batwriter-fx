@@ -8,6 +8,7 @@ import com.azarenka.batwriter.domain.TypeCommand;
 import com.azarenka.batwriter.domain.TypeFileCommand;
 import com.azarenka.batwriter.services.Executor;
 import com.azarenka.batwriter.services.command.infrastructure.ChangeDirInitializer;
+import com.azarenka.batwriter.services.command.infrastructure.CmdCommandInitializer;
 import com.azarenka.batwriter.services.command.infrastructure.ICommandCreator;
 import com.azarenka.batwriter.services.command.infrastructure.StarterInitializer;
 import com.azarenka.batwriter.services.command.infrastructure.SystemVariableInitializer;
@@ -16,6 +17,7 @@ import com.azarenka.batwriter.util.CommandBuilder;
 import com.azarenka.batwriter.util.PropertiesLoader;
 import com.azarenka.batwriter.windows.SettingsWindow;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -51,6 +53,8 @@ public class MainController {
     @FXML
     TextField command;
     @FXML
+    TextField alias;
+    @FXML
     TextField description;
     @FXML
     private TextField pathLabel;
@@ -65,7 +69,8 @@ public class MainController {
 
     public void addCommand() throws IOException {
         ICommand commandCreator = commandMap.get(commandChoiceBox.getValue()).initCreator();
-        String command = commandCreator.getCommand(pathLabel.getText());
+        String command =
+            commandCreator.getCommand("", this.command.getText(), pathLabel.getText(), description.getText());
         System.out.println(command);
         PropertiesApp propertiesApp = loader.loadProperties();
         Executor runner = new Executor(commandBuilder
@@ -85,6 +90,7 @@ public class MainController {
     public void initialize() {
         initCommandChoiceBox();
         initCommandMap();
+        initItems();
     }
 
     public void choiceFile() {
@@ -99,8 +105,8 @@ public class MainController {
      * @return name of file
      */
     private String getFileName() {
-        return commandChoiceBox.getValue().equals(TypeCommand.START_APPLICATION) && !commonFile.isSelected()
-            ? command.getText() + CommandBuilder.postfix
+        return !alias.getText().equals(StringUtils.EMPTY) && !commonFile.isSelected()
+            ? alias.getText() + CommandBuilder.postfix
             : loader.loadProperties().getFileName() + CommandBuilder.postfix;
     }
 
@@ -108,11 +114,15 @@ public class MainController {
         return commandChoiceBox.getValue().equals(TypeCommand.CHANGE_DIR);
     }
 
+    private void initItems() {
+    }
+
     private void initCommandMap() {
         commandMap = new HashMap<>();
         commandMap.put(TypeCommand.START_APPLICATION, new StarterInitializer());
         commandMap.put(TypeCommand.CHANGE_DIR, new ChangeDirInitializer());
         commandMap.put(TypeCommand.SYSTEM_VARIABLE, new SystemVariableInitializer(loader));
+        commandMap.put(TypeCommand.CMD, new CmdCommandInitializer());
     }
 
     private void initCommandChoiceBox() {

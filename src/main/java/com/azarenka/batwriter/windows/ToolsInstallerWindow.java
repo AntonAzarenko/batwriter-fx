@@ -53,6 +53,6 @@ public class ToolsInstallerWindow extends CommonWindowsWidget {
         FXMLLoader mainWidgetWindow = windowLoader.loadFxmlFile();
         mainWidgetWindow.setControllerFactory(aClass -> applicationContext.getBean(aClass));
         Parent mainWidgetParent = getParent(mainWidgetWindow);
-        installerScene = new Scene(mainWidgetParent, 640, 400);
+        installerScene = new Scene(mainWidgetParent, super.getWidth(), super.getHeight());
     }
 }

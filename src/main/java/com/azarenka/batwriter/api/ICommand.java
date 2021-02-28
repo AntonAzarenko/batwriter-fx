@@ -11,5 +11,5 @@ package com.azarenka.batwriter.api;
  */
 public interface ICommand {
 
-    String getCommand(String path, String... vars);
+    String getCommand(String alias, String command, String path, String... vars);
 }
